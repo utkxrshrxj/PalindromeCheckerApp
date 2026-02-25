@@ -8,16 +8,18 @@ public class PalindromeCheckerApp {
         System.out.println("Stay Tuned for upcoming features!!!");
 
         String word = "madam";
-        String reversed = "";
-        for (int i = word.length()-1;i>=0;i--){
-            reversed = reversed + word.charAt(i);
+        boolean isPalindrome = true;
+        for(int i = 0; i<word.length() / 2; i++){
+            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
         }
-        System.out.println("\nChecking Word: "+word);
-        if(word.equals(reversed)){
-            System.out.println("It is a Palindrome");
+        if(isPalindrome) {
+            System.out.println(word + "is a palindrome");
         }
         else{
-            System.out.println("It is not a Palindrome");
+            System.out.println(word + "is not a palindrome");
         }
     }
 }
