@@ -8,7 +8,7 @@ public class PalindromeCheckerApp {
         System.out.println("Stay Tuned for upcoming features!!!");
 
         String word = "madam";
-        String reversed = " ";
+        String reversed = "";
         for (int i = word.length()-1;i>=0;i--){
             reversed = reversed + word.charAt(i);
         }
